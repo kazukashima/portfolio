@@ -18,9 +18,13 @@
         "name": "next"
       }
     ],
+    "baseUrl": ".", 
     "paths": {
-      "@/*": ["./*"]
-    }
+  "@/*": ["./"],
+  "@/components/*": ["components/*"],
+  "@/data/*": ["data/*"],
+  "@/app/*": ["app/*"]
+}
   },
   "include": [
     "next-env.d.ts",
