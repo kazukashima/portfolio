@@ -25,7 +25,6 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 } */
 
-
 @import "tailwindcss";
 
 /* ------------------------------
@@ -59,7 +58,8 @@ body {
   Typography（文章を美しくする）
 ------------------------------ */
 @layer base {
-  h1 {
+  /* Hero 以外のページ見出し */
+  main h1:not(.hero-title) {
     @apply text-5xl sm:text-6xl font-bold tracking-tight leading-tight mb-6;
   }
 

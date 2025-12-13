@@ -141,17 +141,17 @@ export default async function WorkDetailPage({
 
   return (
     <div className="min-h-screen bg-white">
-      {/* ヒーローセクション */}
+      {/* ヒーローセクション
       <div className="relative w-full h-[60vh] min-h-[400px] max-h-[600px]">
         <Image
-          src={work.image}
+          src={work.images[0]}
           alt={work.title}
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-transparent" />
-      </div>
+      </div> */}
 
       {/* コンテンツ */}
       <div className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-12 -mt-20 relative z-10">
