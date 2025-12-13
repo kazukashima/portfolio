@@ -5,8 +5,6 @@ import { FaXTwitter } from "react-icons/fa6";
 export default function AboutPage() {
   return (
     <div className="pb-20">
-
-      {/* ====== 上部：プロフィール画像グリッド ====== */}
   {/* ====== 上部：プロフィール画像グリッド ====== */}
 <div className="max-w-3xl mx-auto mb-20">
   <div className="flex items-center justify-center gap-6">
@@ -36,10 +34,6 @@ export default function AboutPage() {
 </div>
 
 
-
-
-
-      {/* ====== About Me ====== */}
      {/* ====== About Me ====== */}
 <div className="max-w-3xl mx-auto space-y-16 leading-relaxed text-gray-800">
 
@@ -146,6 +140,75 @@ export default function AboutPage() {
   </p>
 </section>
 
+{/* ===== Self Analysis ===== */}
+<section className="space-y-6 mt-12">
+  <h3 className="text-2xl font-semibold">Self Analysis</h3>
+
+  <p className="text-gray-700 leading-relaxed">
+    自己理解を深めるため、自分の行動や考え方の傾向を整理する目的で、診断ツールを一つの参考資料として使用しました。その結果をそのまま受け取るのではなく、これまでの実際の開発経験やチームでの役割と照らし合わせながら、内容を整理し、行動特性として図にまとめています。
+  </p>
+
+  <p className="text-gray-700 leading-relaxed">
+    特に「計画性」「変化への適応」「チーム協調性」を軸に、日々の判断や行動を振り返りました。
+  </p>
+
+  {/* レーダーチャート画像 */}
+  <div className="my-10 flex justify-center">
+    <Image
+      src="/about/analysis.png"
+      alt="Behavioral Radar Chart"
+      width={520}
+      height={520}
+      className="rounded-lg shadow-sm"
+    />
+  </div>
+
+  {/* 特性の要約 */}
+  <ul className="list-disc ml-6 space-y-2 text-gray-800">
+    <li>
+      目標から逆算してタスクに落とし込む <strong>タスク志向</strong>
+    </li>
+    <li>
+      チーム内での共有と連携を重視する <strong>協調型</strong>
+    </li>
+    <li>
+      仕様変更や新しい要求にも前向きに対応する <strong>変化志向</strong>
+    </li>
+    <li>
+      計画を立てつつ、状況に応じて柔軟に調整する <strong>計画型</strong>
+    </li>
+  </ul>
+
+  {/* 行動・経験への変換 */}
+  <div className="space-y-4 text-gray-700 leading-relaxed">
+    
+    
+    <p>
+      これらの特性は、以下のような実務・開発の場面で発揮されてきました。
+    </p>
+
+    <ul className="list-disc ml-6 space-y-2">
+      
+      
+      <li>
+        要件が曖昧、または途中で変更が発生する状況でも、
+        MVPとして必要な機能を再定義し、実装方針を見直しながら開発を進めた経験
+      </li>
+
+      <li>
+        チーム開発において、タスクの整理や優先度付けを行い、
+        メンバーが迷わず作業できるよう進行管理を担った経験
+      </li>
+
+      <li>
+        UI/UX改善において、仮説を立てて実装し、
+        フィードバックをもとに改善を繰り返すサイクルを回してきた経験
+      </li>
+    </ul>
+  </div>
+</section>
+
+
 
 {/* ===== Future Goals ===== */}
 <section className="space-y-4 mt-12">
@@ -177,7 +240,7 @@ export default function AboutPage() {
   <h3 className="text-2xl font-semibold">How others describe me</h3>
 
   <p>
-    "Your diligence, curiosity, and strong sense of ownership, combined with how you support the entire team, will undoubtedly be key to your future success."
+  Your diligence, curiosity, and strong sense of ownership, combined with how you support the entire team, will undoubtedly be key to your future success.
   </p>
 
   <p className="text-gray-700">

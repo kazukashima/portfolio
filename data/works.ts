@@ -1,4 +1,57 @@
-export const works = [
+// data/works.ts
+export type Work = {
+  id: string;
+  title: string;
+  category: string;
+  roles: string[];
+  period: string;
+  client: string;
+  team: string;
+
+  image: string;
+  listImage?: string;
+  heroImage?: string;
+
+  description?: string;
+  fullDescription?: string;
+  overview?: string;
+  outline?: string;
+  objectives?: string;
+  features?: string;
+  richTextNote?: string;
+  ux?: string;
+  growth?: string;
+  nextStep?: string;
+
+  techStack?: {
+    languages?: string[];
+    framework?: string[];
+    styling?: string[];
+    build?: string[];
+    testing?: string[];
+    deploy?: string[];
+    cms?: string[];
+    database?: string[];
+    mapAPI?: string[];
+    extra?: string[];
+  };
+
+  architecture?: string;
+  architectureImage?: string;
+
+  images?: string[];
+  imagesDetail?: {
+    label: string;
+    src: string;
+    description?: string;
+    isGif?: boolean;
+  }[];
+};
+
+
+
+
+export const works: Work[] = [
 
   // ============================
   // ① My Portfolio
@@ -165,7 +218,7 @@ export const works = [
   id: "qiita-downloader",
   title: "Qiita Downloader App",
   category: `Qiita の全記事を “一括でローカル保存” できる高速ダウンローダー。
-Markdown / PDF を自動生成し、技術資産を安全に手元に残せるようにした。`,
+Markdown 形式で記事をダウンロードでき、技術資産を安全に手元に残せるようにした。`,
 
   roles: ["Frontend Development", "UI Design", "API Integration"],
   period: "2025/11 – 2025/12",
@@ -201,7 +254,7 @@ Markdown / PDF を自動生成し、技術資産を安全に手元に残せる�
   // アプリケーション概要
   // ======================
   outline: `
-Qiita Downloader App は、Qiita API を用いて記事一覧・本文・タグ・日付情報を取得し、Markdown / PDF の 2 形式で一括保存できるバックアップツールです。Qiita に標準の一括ダウンロード機能がない課題を解決するために開発しました。
+Qiita Downloader App は、Qiita API を用いて記事一覧・本文・タグ・日付情報を取得し、Markdown 形式で一括保存できるバックアップツールです。Qiita に標準の一括ダウンロード機能がない課題を解決するために開発しました。
 
 ユーザー名と API トークンを入力すると、Qiita API から記事が即時に取得され、一覧から必要な記事を選んでまとめてダウンロードできます。
 
@@ -345,7 +398,7 @@ architectureImage: "/qiita-downloader/image.png",
     build: ["Vite", "Makefile"],
     database: ["Supabase"],
     mapAPI: ["Google Maps API (@vis.gl/react-google-maps)"],
-    testing: ["なし"],
+    testing: ["Jest", "React Testing Library"],
     deploy: ["Firebase Hosting", "GitHub Actions (CI/CD)"],
     // cms: ["なし"],
     // extra: [
@@ -396,7 +449,7 @@ features: `
 `,
 
 
-  architectureImage: "/studyspot/image.png",
+  // architectureImage: "/studyspot/image.png",
   ux: `
 1.Google Maps API と React の再レンダー問題
 
@@ -721,8 +774,11 @@ listImage: "/businesscard/thumbnail.png",
 翌日の朝 6 時に前日のデータを自動で削除する仕組みを備えており、イベント・勉強会・交流会での “一時的な名刺共有” に最適な設計としました。
   `,
 
-  // overview: `
-  // `,
+  overview: `
+  開発の背景として、名刺情報の管理や共有が属人的かつ煩雑になりやすい点に課題を感じていました。紙の名刺や個人ごとの管理方法では、情報の更新や共有が難しく、必要なときにすぐ参照できない場面を何度も経験しました。
+
+そこで、名刺情報をデータとして一元管理し、URLで簡単に共有できる仕組みがあれば便利なのではないかと考え、本アプリの開発に取り組みました。
+  `,
 
   objectives: `
 - 誰でも使えるワンタイム名刺を作る
@@ -881,7 +937,10 @@ features: `
   // ===========================
   // objectives（使用技術）
   // ===========================
-//   objectives: `
+  overview: `
+  Qiitaの記事と個人ブログの記事を別々に管理していることに不便さを感じたことが、開発のきっかけです。記事を一つのアプリ上で一覧・閲覧できるようにすることで、学習や情報整理を効率化したいと考え、本アプリを開発しました。
+
+  `
 // 使用技術
 
 // 分類 / 内容
@@ -901,7 +960,7 @@ features: `
 // 開発で苦労したポイントと解決策
 
 
-//   `,
+  ,
 
 
   architectureImage: "/techblog/image2.png",
