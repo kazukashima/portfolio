@@ -9,7 +9,7 @@ export default function Home() {
       {/* Hero */}
       <section className="mb-28">
         <h1 className="text-6xl font-semibold leading-tight ">
-    Full-Stack Developer Based in Vancouver.<br/>
+    Frontend Developer Based in Vancouver.<br/>
     Hi, I'm Kazutora Hattori.
   </h1>
 
