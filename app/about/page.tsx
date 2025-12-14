@@ -52,7 +52,7 @@ export default function AboutPage() {
 
     {/* 肩書き */}
     <p className="text-lg text-indigo-600 font-medium">
-      
+      Frontend Developer
     </p>
 
   </header>
